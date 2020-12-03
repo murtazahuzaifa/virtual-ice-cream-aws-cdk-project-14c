@@ -1,0 +1,37 @@
+type IceCream {
+  id: ID!
+  receiverName: String!
+  senderName: String!
+  message: String!
+  iceCreamColor: IceCreamColor!
+}
+
+type Response { success:Boolean! }
+
+type IceCreamColor{
+  color1: String
+  color2: String
+  color3: String
+}
+
+input IceCreamColorInput{
+  color1: String
+  color2: String
+  color3: String
+}
+input AddIceCreamInput {
+  receiverName:String!, 
+  senderName:String!,
+  message:String!, 
+  iceCreamColor: IceCreamColorInput!
+}
+
+type Query {
+  allIceCreams: [IceCream]
+  getIceCream(id:ID!): IceCream!
+  addIceCreamPage: Response!
+}
+
+type Mutation {
+  addIceCream(iceCream:AddIceCreamInput!): IceCream!
+}

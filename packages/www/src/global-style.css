@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    user-select: none;
+}
+
+html {
+    background: radial-gradient(rgb(189, 205, 221), rgb(107, 117, 93)) no-repeat center;
+}
+
+body {
+    min-height: 100vh;
+}

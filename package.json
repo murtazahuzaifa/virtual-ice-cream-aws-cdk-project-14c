@@ -1,0 +1,15 @@
+{
+  "name": "virtual-ice-cream-project-12e",
+  "description": "project of virtaul ice-cream created using gatsby, aws appsync and dynamo db",
+  "version": "1.0.0",
+  "author": "Murtaza Hanzala",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "install-all": "yarn install --packages/www && cd aws-cdk && yarn install && cd lambda && yarn install",
+    "aws-cdk-build": "cd aws-cdk && npm run build"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
